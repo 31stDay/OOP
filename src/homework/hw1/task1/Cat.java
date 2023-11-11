@@ -1,9 +1,9 @@
 package homework.hw1.task1;
 
 public class Cat {
-
     private String name;
     private int age;
+    private Owner ownerName;
 
     public String getName() {
         return name;
@@ -21,9 +21,15 @@ public class Cat {
         this.age = age;
     }
 
-    public void greet(String name, int age){
-        System.out.println();
+    public Owner getOwnerName() {
+        return ownerName;
+    }
 
+    public void setOwnerName(Owner ownerName) {
+        this.ownerName = ownerName;
+    }
 
+    public void greet(){
+        System.out.println("Мяу! Меня зовут" + name + ". Мне" + age + "года(лет). Мой владелец -" + ownerName.getName() +".");
     }
 }
